@@ -258,6 +258,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Camera" width="48" height="48"/>
+        <image name="Film" width="64" height="64"/>
+        <image name="Music" width="50" height="50"/>
+        <image name="Music2" width="50" height="50"/>
         <image name="selfie1" width="1280" height="960"/>
     </resources>
 </document>
