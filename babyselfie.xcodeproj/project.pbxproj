@@ -14,6 +14,10 @@
 		404A822C1D564B20001EF486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A822A1D564B20001EF486 /* LaunchScreen.storyboard */; };
 		404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82331D565A02001EF486 /* SoundsViewController.swift */; };
 		404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82351D565A10001EF486 /* PhotosViewController.swift */; };
+		404A823D1D566FD9001EF486 /* explode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 404A82391D566FD9001EF486 /* explode.wav */; };
+		404A823E1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */; };
+		404A823F1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */; };
+		404A82401D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		404A822D1D564B20001EF486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404A82331D565A02001EF486 /* SoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		404A82351D565A10001EF486 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		404A82391D566FD9001EF486 /* explode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explode.wav; sourceTree = "<group>"; };
+		404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cow And Bell-SoundBible.com-1243222141.mp3"; sourceTree = "<group>"; };
+		404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Horse Neigh-SoundBible.com-1740540960.mp3"; sourceTree = "<group>"; };
+		404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rooster Crow-SoundBible.com-1802551702.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,10 @@
 		404A82371D566077001EF486 /* soundsGroup */ = {
 			isa = PBXGroup;
 			children = (
+				404A82391D566FD9001EF486 /* explode.wav */,
+				404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */,
+				404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */,
+				404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */,
 			);
 			name = soundsGroup;
 			sourceTree = "<group>";
@@ -137,9 +149,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404A82401D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 in Resources */,
+				404A823D1D566FD9001EF486 /* explode.wav in Resources */,
 				404A822C1D564B20001EF486 /* LaunchScreen.storyboard in Resources */,
 				404A82291D564B20001EF486 /* Assets.xcassets in Resources */,
+				404A823F1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 in Resources */,
 				404A82271D564B20001EF486 /* Main.storyboard in Resources */,
+				404A823E1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
