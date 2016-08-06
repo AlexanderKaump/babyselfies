@@ -12,14 +12,7 @@ class SoundAssist {
     
     class func randomSoundEffect() -> NSURL {
         
-        var dictArray = [[String: String]]()
-        dictArray.append(["name":"cow", "ext": "mp3"])
-        dictArray.append(["name":"Rooster", "ext": "mp3"])
-        dictArray.append(["name":"Jump7", "ext": "wav"])
-        dictArray.append(["name":"explode", "ext": "wav"])
-        dictArray.append(["name":"Jump9", "ext": "wav"])
-
-        
+        var dictArray = SoundAssist.dictReturn()
 
         let random = Int(arc4random_uniform(UInt32(dictArray.count)))
         let dict = dictArray[random]
@@ -31,4 +24,14 @@ class SoundAssist {
         return buttonAudioURL
     }
     
+    class func dictReturn() -> [[String: String]] {
+        var dictArray = [[String: String]]()
+        dictArray.append(["name":"cow", "ext": "mp3"])
+        dictArray.append(["name":"Rooster", "ext": "mp3"])
+        dictArray.append(["name":"Jump7", "ext": "wav"])
+        dictArray.append(["name":"explode", "ext": "wav"])
+        dictArray.append(["name":"Jump9", "ext": "wav"])
+
+        return dictArray
+    }
 }

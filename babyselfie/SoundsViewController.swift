@@ -10,17 +10,22 @@ import UIKit
 
 class SoundsViewController: UIViewController{
     
-    var textArray = ["1", "2", "3", "4", "5"]
+    var textArray = SoundAssist.dictReturn()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
         
-        cell.textLabel?.text = textArray[indexPath.row]
+        let object = textArray[indexPath.row]
+        cell.textLabel?.text =  object["name"]!
         
         return cell
     }

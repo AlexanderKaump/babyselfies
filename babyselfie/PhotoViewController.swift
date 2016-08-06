@@ -18,6 +18,10 @@ class PhotoViewController: UIViewController {
         self.imageView.image = UIImage(named: photoName)
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     @IBAction func export(sender: AnyObject) {
         
     }
