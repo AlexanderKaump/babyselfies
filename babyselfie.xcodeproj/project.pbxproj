@@ -21,6 +21,7 @@
 		404A82461D5680AF001EF486 /* horsepls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A82451D5680AF001EF486 /* horsepls.mp3 */; };
 		40EE090A1D5681A80035B836 /* Jump7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE09081D5681A80035B836 /* Jump7.wav */; };
 		40EE090B1D5681A80035B836 /* Randomize5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE09091D5681A80035B836 /* Randomize5.wav */; };
+		AC6CA9751D56828B00212352 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CA9741D56828B00212352 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		404A82451D5680AF001EF486 /* horsepls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = horsepls.mp3; sourceTree = "<group>"; };
 		40EE09081D5681A80035B836 /* Jump7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump7.wav; sourceTree = "<group>"; };
 		40EE09091D5681A80035B836 /* Randomize5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Randomize5.wav; sourceTree = "<group>"; };
+		AC6CA9741D56828B00212352 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 				404A82231D564B20001EF486 /* CameraViewController.swift */,
 				404A82411D56734F001EF486 /* SoundAssist.swift */,
 				404A82331D565A02001EF486 /* SoundsViewController.swift */,
-				AC6CA9721D567CA000212352 /* PhotoViewController.swift */,
+				AC6CA9741D56828B00212352 /* PhotoViewController.swift */,
 				404A82351D565A10001EF486 /* PhotosViewController.swift */,
 				404A82251D564B20001EF486 /* Main.storyboard */,
 				404A82281D564B20001EF486 /* Assets.xcassets */,
@@ -183,6 +185,7 @@
 				404A82221D564B20001EF486 /* AppDelegate.swift in Sources */,
 				404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */,
 				404A82421D56734F001EF486 /* SoundAssist.swift in Sources */,
+				AC6CA9751D56828B00212352 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
