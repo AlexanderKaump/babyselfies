@@ -24,10 +24,8 @@ class CameraViewController: UIViewController {
         self.initializeImageCapture()
     
         ButtonAudioPlayer = AVAudioPlayer()
-        
-        
-        
     }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -79,8 +77,24 @@ extension CameraViewController {
                 (imageDataSampleBuffer, error) -> Void in
                 if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer) {
                     let image = UIImage(data: imageData)!
-                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                    CustomPhotoAlbum.sharedInstance.saveImage(image)
+                    
+                    var rotatedOrientation = UIImageOrientation.Up
+                    if UIDevice.currentDevice().orientation == .LandscapeLeft {
+                        rotatedOrientation = .Down
+                    } else if UIDevice.currentDevice().orientation == .LandscapeRight {
+                        rotatedOrientation = .Up
+                    } else if UIDevice.currentDevice().orientation == .Portrait {
+                        rotatedOrientation = .Right
+                    } else if UIDevice.currentDevice().orientation == .PortraitUpsideDown {
+                        rotatedOrientation = .Left
+                    }
+                    
+                    let rotatedImage: UIImage = UIImage(CGImage: image.CGImage! ,
+                                                           scale: 1.0 ,
+                                                           orientation: rotatedOrientation)
+                    
+                    UIImageWriteToSavedPhotosAlbum(rotatedImage, nil, nil, nil)
+                    CustomPhotoAlbum.sharedInstance.saveImage(rotatedImage)
                 }
             }
         }

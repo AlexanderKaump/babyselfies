@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Photos
 
 class PhotoViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    var photoName = ""
+    var asset = PHAsset()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.imageView.image = UIImage(named: photoName)
+        
+        let imageManager = PHCachingImageManager()
+        let imageSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
+        
+        imageManager.requestImageForAsset(asset, targetSize: imageSize, contentMode: .AspectFill, options: nil, resultHandler: {(image: UIImage?,
+            info: [NSObject : AnyObject]?) in
+            self.imageView.image = image
+        })
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -24,9 +32,19 @@ class PhotoViewController: UIViewController {
     
     @IBAction func export(sender: AnyObject) {
         
+        let objectsToShare = [self.imageView.image!]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func deleteImage(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({ 
+            PHAssetChangeRequest.deleteAssets([self.asset])
+            }) { (success, error) in
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+        }
     }
 }
