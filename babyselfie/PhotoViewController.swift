@@ -32,6 +32,10 @@ class PhotoViewController: UIViewController {
     
     @IBAction func export(sender: AnyObject) {
         
+        let objectsToShare = [self.imageView.image!]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func deleteImage(sender: AnyObject) {

@@ -24,10 +24,8 @@ class CameraViewController: UIViewController {
         self.initializeImageCapture()
     
         ButtonAudioPlayer = AVAudioPlayer()
-        
-        
-        
     }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
