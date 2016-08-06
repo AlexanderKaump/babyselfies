@@ -83,9 +83,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-fa-zgz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y91-fa-zgz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-kS-EWT">
+                                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="H4o-Ok-luT"/>
+                                            <constraint firstAttribute="height" constant="50" id="J4N-pU-0ON"/>
+                                            <constraint firstAttribute="height" constant="50" id="LhU-Ci-Ud8"/>
+                                            <constraint firstAttribute="width" constant="50" id="Sjj-iq-hoo"/>
+                                            <constraint firstAttribute="width" constant="50" id="qhN-QD-trl"/>
+                                            <constraint firstAttribute="height" constant="45" id="uMt-9K-INS"/>
+                                        </constraints>
+                                        <state key="normal" image="Music2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="H4o-Ok-luT"/>
+                                                <exclude reference="LhU-Ci-Ud8"/>
+                                                <exclude reference="qhN-QD-trl"/>
+                                                <exclude reference="uMt-9K-INS"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="NCl-wu-zAu" kind="show" id="vE7-H9-2Qf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.25294739700000002" blue="0.57639105930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="top" secondItem="Y91-fa-zgz" secondAttribute="top" constant="8" id="G2e-ds-iVp"/>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="top" secondItem="Y91-fa-zgz" secondAttribute="top" constant="8" id="KE3-Ww-4vy"/>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="leading" secondItem="Y91-fa-zgz" secondAttribute="leading" constant="8" id="R3G-PP-jXE"/>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="top" secondItem="Y91-fa-zgz" secondAttribute="top" constant="8" id="UwT-zF-3kc"/>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="leading" secondItem="Y91-fa-zgz" secondAttribute="leading" constant="8" id="bYZ-oH-ZoP"/>
+                                    <constraint firstItem="3vH-kS-EWT" firstAttribute="leading" secondItem="Y91-fa-zgz" secondAttribute="leading" constant="8" id="y2F-im-ELr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G2e-ds-iVp"/>
+                                        <exclude reference="R3G-PP-jXE"/>
+                                        <exclude reference="UwT-zF-3kc"/>
+                                        <exclude reference="bYZ-oH-ZoP"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPw-Mk-c4G">
                                 <rect key="frame" x="0.0" y="525" width="600" height="75"/>
@@ -113,24 +154,13 @@
                                     <constraint firstAttribute="bottom" secondItem="sg0-Q8-0EH" secondAttribute="bottom" id="yDa-NU-kSx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-kS-EWT">
-                                <rect key="frame" x="20" y="28" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="H4o-Ok-luT"/>
-                                    <constraint firstAttribute="height" constant="45" id="uMt-9K-INS"/>
-                                </constraints>
-                                <state key="normal" title="Sound"/>
-                                <connections>
-                                    <segue destination="NCl-wu-zAu" kind="show" id="vE7-H9-2Qf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON9-PN-963">
-                                <rect key="frame" x="522" y="28" width="45" height="45"/>
+                                <rect key="frame" x="542" y="8" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="cfJ-t9-XC5"/>
-                                    <constraint firstAttribute="width" constant="45" id="g4D-Ui-Isf"/>
+                                    <constraint firstAttribute="height" constant="50" id="cfJ-t9-XC5"/>
+                                    <constraint firstAttribute="width" constant="50" id="g4D-Ui-Isf"/>
                                 </constraints>
-                                <state key="normal" title="Photo"/>
+                                <state key="normal" backgroundImage="Film"/>
                                 <connections>
                                     <segue destination="O2v-dD-a3A" kind="show" id="l1y-G6-kqW"/>
                                 </connections>
@@ -138,14 +168,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ON9-PN-963" secondAttribute="trailing" constant="13" id="4HU-po-qek"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y91-fa-zgz" secondAttribute="trailing" constant="-20" id="5Z1-Q5-KvJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TPw-Mk-c4G" secondAttribute="trailing" constant="-20" id="abD-QY-V5q"/>
+                            <constraint firstItem="Y91-fa-zgz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aep-f8-vfv"/>
                             <constraint firstItem="TPw-Mk-c4G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fHO-2k-duw"/>
                             <constraint firstItem="ON9-PN-963" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gv4-mR-0xB"/>
+                            <constraint firstItem="ON9-PN-963" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="iLA-3L-MMz"/>
+                            <constraint firstItem="Y91-fa-zgz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ja8-jU-adR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TPw-Mk-c4G" secondAttribute="bottom" id="jp2-VR-BZ3"/>
-                            <constraint firstItem="3vH-kS-EWT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mLt-HD-zei"/>
-                            <constraint firstItem="3vH-kS-EWT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rd7-XG-u57"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y91-fa-zgz" secondAttribute="bottom" id="sfY-SF-8LM"/>
+                            <constraint firstAttribute="trailing" secondItem="ON9-PN-963" secondAttribute="trailing" constant="8" id="zTY-Cy-p8Z"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gv4-mR-0xB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="f7u-t8-eHY"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -176,4 +214,8 @@
             <point key="canvasLocation" x="305" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Film" width="64" height="64"/>
+        <image name="Music2" width="50" height="50"/>
+    </resources>
 </document>
