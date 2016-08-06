@@ -66,8 +66,16 @@
 				404A82281D564B20001EF486 /* Assets.xcassets */,
 				404A822A1D564B20001EF486 /* LaunchScreen.storyboard */,
 				404A822D1D564B20001EF486 /* Info.plist */,
+				404A82371D566077001EF486 /* soundsGroup */,
 			);
 			path = babyselfie;
+			sourceTree = "<group>";
+		};
+		404A82371D566077001EF486 /* soundsGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = soundsGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
