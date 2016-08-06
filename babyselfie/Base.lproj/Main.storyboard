@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uTL-2f-LFL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uTL-2f-LFL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Sounds View Controller-->
+        <!--Sounds-->
         <scene sceneID="ZOB-fR-38A">
             <objects>
                 <viewController id="NCl-wu-zAu" customClass="SoundsViewController" customModule="babyselfie" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,12 +31,14 @@
                             <constraint firstItem="jZY-ze-CiD" firstAttribute="top" secondItem="1Du-vB-G7k" secondAttribute="bottom" id="rA1-bZ-JCo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sounds" id="WO9-iX-oYl"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Pj-jn-F3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="-378"/>
         </scene>
-        <!--Photos View Controller-->
+        <!--Photos-->
         <scene sceneID="4B9-PL-gCB">
             <objects>
                 <viewController id="O2v-dD-a3A" customClass="PhotosViewController" customModule="babyselfie" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,6 +51,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Photos" id="G0c-hA-wrI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ya1-uh-cIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +102,7 @@
                                     <constraint firstAttribute="width" constant="45" id="H4o-Ok-luT"/>
                                     <constraint firstAttribute="height" constant="45" id="uMt-9K-INS"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Sound"/>
                                 <connections>
                                     <segue destination="NCl-wu-zAu" kind="show" id="vE7-H9-2Qf"/>
                                 </connections>
@@ -109,7 +113,7 @@
                                     <constraint firstAttribute="height" constant="45" id="cfJ-t9-XC5"/>
                                     <constraint firstAttribute="width" constant="45" id="g4D-Ui-Isf"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Photo"/>
                                 <connections>
                                     <segue destination="O2v-dD-a3A" kind="show" id="l1y-G6-kqW"/>
                                 </connections>
