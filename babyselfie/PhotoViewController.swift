@@ -39,6 +39,12 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func deleteImage(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({ 
+            PHAssetChangeRequest.deleteAssets([self.asset])
+            }) { (success, error) in
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+        }
     }
 }

@@ -14,7 +14,7 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     let imageManager = PHCachingImageManager()
-    let photos = CustomPhotoAlbum.sharedInstance.photos()
+    var photos: PHFetchResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,12 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        photos = CustomPhotoAlbum.sharedInstance.photos()
+        self.collectionView.reloadData()
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -33,7 +39,7 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
         if segue.identifier == "PhotoSegue" {
             let indexPath = sender as! NSIndexPath
             let photoVC = segue.destinationViewController as! PhotoViewController
-            photoVC.asset = self.photos[indexPath.row] as! PHAsset
+            photoVC.asset = self.photos![indexPath.row] as! PHAsset
         }
     }
 }
@@ -45,12 +51,12 @@ extension PhotosViewController {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return photos!.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
-        let asset = self.photos[indexPath.row] as! PHAsset
+        let asset = self.photos![indexPath.row] as! PHAsset
         
         let size = cell.frame.size
         imageManager.requestImageForAsset(asset, targetSize: size, contentMode: .AspectFill, options: nil, resultHandler: { (image, info) in
