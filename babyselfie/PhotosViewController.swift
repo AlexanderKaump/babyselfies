@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Photos
 
 class PhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let photoNames = ["selfie1", "selfie2", "selfie3", "selfie4", "selfie5"]
+    
+    let imageManager = PHCachingImageManager()
+    let photos = CustomPhotoAlbum.sharedInstance.photos()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +22,14 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let width = self.view.frame.size.width/4
         (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: width, height: width)
+
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PhotoSegue" {
             let indexPath = sender as! NSIndexPath
-            let name = self.photoNames[indexPath.row]
             let photoVC = segue.destinationViewController as! PhotoViewController
-            photoVC.photoName = name
+            photoVC.asset = self.photos[indexPath.row] as! PHAsset
         }
     }
 }
@@ -38,13 +41,17 @@ extension PhotosViewController {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoNames.count
+        return photos.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
-        let name = self.photoNames[indexPath.row]
-        cell.imageView.image = UIImage(named: name)
+        let asset = self.photos[indexPath.row] as! PHAsset
+        
+        let size = cell.frame.size
+        imageManager.requestImageForAsset(asset, targetSize: size, contentMode: .AspectFill, options: nil, resultHandler: { (image, info) in
+            cell.imageView.image = image
+        })
         return cell
     }
     
