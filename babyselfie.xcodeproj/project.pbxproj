@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		404A82221D564B20001EF486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82211D564B20001EF486 /* AppDelegate.swift */; };
-		404A82241D564B20001EF486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82231D564B20001EF486 /* ViewController.swift */; };
+		404A82241D564B20001EF486 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82231D564B20001EF486 /* CameraViewController.swift */; };
 		404A82271D564B20001EF486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A82251D564B20001EF486 /* Main.storyboard */; };
 		404A82291D564B20001EF486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404A82281D564B20001EF486 /* Assets.xcassets */; };
 		404A822C1D564B20001EF486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A822A1D564B20001EF486 /* LaunchScreen.storyboard */; };
+		404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82331D565A02001EF486 /* SoundsViewController.swift */; };
+		404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82351D565A10001EF486 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		404A821E1D564B20001EF486 /* babyselfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babyselfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404A82211D564B20001EF486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		404A82231D564B20001EF486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		404A82231D564B20001EF486 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		404A82261D564B20001EF486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		404A82281D564B20001EF486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404A822B1D564B20001EF486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404A822D1D564B20001EF486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404A82331D565A02001EF486 /* SoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		404A82351D565A10001EF486 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				404A82211D564B20001EF486 /* AppDelegate.swift */,
-				404A82231D564B20001EF486 /* ViewController.swift */,
+				404A82231D564B20001EF486 /* CameraViewController.swift */,
+				404A82331D565A02001EF486 /* SoundsViewController.swift */,
+				404A82351D565A10001EF486 /* PhotosViewController.swift */,
 				404A82251D564B20001EF486 /* Main.storyboard */,
 				404A82281D564B20001EF486 /* Assets.xcassets */,
 				404A822A1D564B20001EF486 /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				404A82241D564B20001EF486 /* ViewController.swift in Sources */,
+				404A82241D564B20001EF486 /* CameraViewController.swift in Sources */,
+				404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */,
 				404A82221D564B20001EF486 /* AppDelegate.swift in Sources */,
+				404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
