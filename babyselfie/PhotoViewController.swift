@@ -26,6 +26,10 @@ class PhotoViewController: UIViewController {
         })
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     @IBAction func export(sender: AnyObject) {
         
     }

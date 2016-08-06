@@ -24,6 +24,10 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
         (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: width, height: width)
 
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PhotoSegue" {
