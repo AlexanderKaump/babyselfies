@@ -23,6 +23,7 @@
 		40EE090E1D5683AA0035B836 /* Jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE090C1D5683AA0035B836 /* Jump.wav */; };
 		40EE090F1D5683AA0035B836 /* Jump9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE090D1D5683AA0035B836 /* Jump9.wav */; };
 		AC6CA9751D56828B00212352 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CA9741D56828B00212352 /* PhotoViewController.swift */; };
+		AC6CA9771D5685C100212352 /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CA9761D5685C100212352 /* CustomAlbum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		40EE090C1D5683AA0035B836 /* Jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump.wav; sourceTree = "<group>"; };
 		40EE090D1D5683AA0035B836 /* Jump9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump9.wav; sourceTree = "<group>"; };
 		AC6CA9741D56828B00212352 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		AC6CA9761D5685C100212352 /* CustomAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				404A82211D564B20001EF486 /* AppDelegate.swift */,
 				404A82231D564B20001EF486 /* CameraViewController.swift */,
+				AC6CA9761D5685C100212352 /* CustomAlbum.swift */,
 				404A82411D56734F001EF486 /* SoundAssist.swift */,
 				404A82331D565A02001EF486 /* SoundsViewController.swift */,
 				AC6CA9741D56828B00212352 /* PhotoViewController.swift */,
@@ -186,6 +189,7 @@
 			files = (
 				404A82241D564B20001EF486 /* CameraViewController.swift in Sources */,
 				404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */,
+				AC6CA9771D5685C100212352 /* CustomAlbum.swift in Sources */,
 				404A82221D564B20001EF486 /* AppDelegate.swift in Sources */,
 				404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */,
 				404A82421D56734F001EF486 /* SoundAssist.swift in Sources */,

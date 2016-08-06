@@ -36,12 +36,16 @@ class CameraViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
     }
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        self.saveToCamera()
+    }
 }
 
 extension CameraViewController {
     
     func initializeImageCapture() {
-        let devices = AVCaptureDevice.devices().filter{ $0.hasMediaType(AVMediaTypeVideo) && $0.position == AVCaptureDevicePosition.Back }
+        let devices = AVCaptureDevice.devices().filter{ $0.hasMediaType(AVMediaTypeVideo) && $0.position == AVCaptureDevicePosition.Front }
         if let captureDevice = devices.first as? AVCaptureDevice  {
             
             do {
@@ -69,12 +73,14 @@ extension CameraViewController {
         }
     }
     
-    func saveToCamera(sender: UITapGestureRecognizer) {
+    func saveToCamera() {
         if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
             stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
                 (imageDataSampleBuffer, error) -> Void in
                 if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer) {
-                    UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData)!, nil, nil, nil)
+                    let image = UIImage(data: imageData)!
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    CustomPhotoAlbum.sharedInstance.saveImage(image)
                 }
             }
         }
