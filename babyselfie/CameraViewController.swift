@@ -87,10 +87,13 @@ extension CameraViewController {
     }
     
     @IBAction func soundButton(sender: AnyObject) {
-        ButtonAudioPlayer = try! AVAudioPlayer(contentsOfURL: SoundAssist.randomSoundEffect()) 
-        ButtonAudioPlayer.currentTime = 1
-        ButtonAudioPlayer.prepareToPlay()
-        
-        ButtonAudioPlayer.play()
+        if let effect = SoundAssist.randomSoundEffect() {
+            ButtonAudioPlayer = try! AVAudioPlayer(contentsOfURL: effect)
+            ButtonAudioPlayer.currentTime = 1
+            ButtonAudioPlayer.prepareToPlay()
+            
+            ButtonAudioPlayer.play()
+        }
+   
     }
 }

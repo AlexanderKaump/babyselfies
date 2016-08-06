@@ -10,12 +10,25 @@ import AVFoundation
 
 class SoundAssist {
     
-    class func randomSoundEffect() -> NSURL {
+    class func randomSoundEffect() -> NSURL? {
         
-        var dictArray = SoundAssist.dictReturn()
+        let dictArray = SoundAssist.dictReturn()
+        let selectedArray = SoundAssist.returnSelect()
+        var checkArray = [[String: String]]()
+        
+        for dict in dictArray {
+            if selectedArray.contains(dict["name"]!) {
+                checkArray.append(dict)
+            }
+            
+        }
+        
+        if checkArray.count == 0 {
+            return nil 
+        }
 
-        let random = Int(arc4random_uniform(UInt32(dictArray.count)))
-        let dict = dictArray[random]
+        let random = Int(arc4random_uniform(UInt32(checkArray.count)))
+        let dict = checkArray[random]
         
         let buttonAudioURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(dict["name"], ofType: dict["ext"])!)
         
@@ -33,5 +46,27 @@ class SoundAssist {
         dictArray.append(["name":"Jump9", "ext": "wav"])
 
         return dictArray
+    }
+    
+    class func addSelect(name: String) {
+        var selectedArray = SoundAssist.returnSelect()
+        selectedArray.append(name)
+        NSUserDefaults.standardUserDefaults().setValue(selectedArray, forKey: "selectedSounds")
+    }
+    
+    class func removeSelect(name: String) {
+        var selectedArray = SoundAssist.returnSelect()
+        selectedArray.removeAtIndex(selectedArray.indexOf(name)!)
+        NSUserDefaults.standardUserDefaults().setValue(selectedArray, forKey: "selectedSounds")
+    }
+    
+    class func returnSelect() -> [String] {
+    
+        var selectedArray = [String]()
+        if let fetchedArray = NSUserDefaults.standardUserDefaults().valueForKey("selectedSounds") as? [String] {
+            selectedArray.appendContentsOf(fetchedArray)
+        }
+        
+        return selectedArray
     }
 }
