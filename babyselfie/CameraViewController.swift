@@ -71,7 +71,9 @@ extension CameraViewController {
             stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection) {
                 (imageDataSampleBuffer, error) -> Void in
                 if let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer) {
-                    UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData)!, nil, nil, nil)
+                    let image = UIImage(data: imageData)!
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    CustomPhotoAlbum.sharedInstance.saveImage(image)
                 }
             }
         }
