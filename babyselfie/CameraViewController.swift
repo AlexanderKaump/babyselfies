@@ -50,7 +50,7 @@ extension CameraViewController {
                 previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
                 let cameraPreview = UIView(frame: CGRectMake(0.0, 0.0, view.bounds.size.width, view.bounds.size.height))
                 cameraPreview.layer.addSublayer(previewLayer)
-                self.view.addSubview(cameraPreview)
+                self.cameraView.addSubview(cameraPreview)
             }
         } else {
             print("no camera found")
