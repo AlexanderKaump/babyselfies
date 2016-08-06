@@ -15,9 +15,12 @@
 		404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82331D565A02001EF486 /* SoundsViewController.swift */; };
 		404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82351D565A10001EF486 /* PhotosViewController.swift */; };
 		404A823D1D566FD9001EF486 /* explode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 404A82391D566FD9001EF486 /* explode.wav */; };
-		404A823E1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */; };
-		404A823F1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */; };
-		404A82401D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */; };
+		404A823E1D566FD9001EF486 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823A1D566FD9001EF486 /* cow.mp3 */; };
+		404A82401D566FD9001EF486 /* Rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A823C1D566FD9001EF486 /* Rooster.mp3 */; };
+		404A82421D56734F001EF486 /* SoundAssist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A82411D56734F001EF486 /* SoundAssist.swift */; };
+		404A82461D5680AF001EF486 /* horsepls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 404A82451D5680AF001EF486 /* horsepls.mp3 */; };
+		40EE090A1D5681A80035B836 /* Jump7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE09081D5681A80035B836 /* Jump7.wav */; };
+		40EE090B1D5681A80035B836 /* Randomize5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 40EE09091D5681A80035B836 /* Randomize5.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +34,12 @@
 		404A82331D565A02001EF486 /* SoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		404A82351D565A10001EF486 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		404A82391D566FD9001EF486 /* explode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explode.wav; sourceTree = "<group>"; };
-		404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Cow And Bell-SoundBible.com-1243222141.mp3"; sourceTree = "<group>"; };
-		404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Horse Neigh-SoundBible.com-1740540960.mp3"; sourceTree = "<group>"; };
-		404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rooster Crow-SoundBible.com-1802551702.mp3"; sourceTree = "<group>"; };
+		404A823A1D566FD9001EF486 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
+		404A823C1D566FD9001EF486 /* Rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rooster.mp3; sourceTree = "<group>"; };
+		404A82411D56734F001EF486 /* SoundAssist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundAssist.swift; sourceTree = "<group>"; };
+		404A82451D5680AF001EF486 /* horsepls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = horsepls.mp3; sourceTree = "<group>"; };
+		40EE09081D5681A80035B836 /* Jump7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump7.wav; sourceTree = "<group>"; };
+		40EE09091D5681A80035B836 /* Randomize5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Randomize5.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 			children = (
 				404A82211D564B20001EF486 /* AppDelegate.swift */,
 				404A82231D564B20001EF486 /* CameraViewController.swift */,
+				404A82411D56734F001EF486 /* SoundAssist.swift */,
 				404A82331D565A02001EF486 /* SoundsViewController.swift */,
 				404A82351D565A10001EF486 /* PhotosViewController.swift */,
 				404A82251D564B20001EF486 /* Main.storyboard */,
@@ -82,10 +89,12 @@
 		404A82371D566077001EF486 /* soundsGroup */ = {
 			isa = PBXGroup;
 			children = (
+				404A82451D5680AF001EF486 /* horsepls.mp3 */,
+				40EE09081D5681A80035B836 /* Jump7.wav */,
+				40EE09091D5681A80035B836 /* Randomize5.wav */,
 				404A82391D566FD9001EF486 /* explode.wav */,
-				404A823A1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 */,
-				404A823B1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 */,
-				404A823C1D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 */,
+				404A823A1D566FD9001EF486 /* cow.mp3 */,
+				404A823C1D566FD9001EF486 /* Rooster.mp3 */,
 			);
 			name = soundsGroup;
 			sourceTree = "<group>";
@@ -149,13 +158,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				404A82401D566FD9001EF486 /* Rooster Crow-SoundBible.com-1802551702.mp3 in Resources */,
+				40EE090B1D5681A80035B836 /* Randomize5.wav in Resources */,
+				40EE090A1D5681A80035B836 /* Jump7.wav in Resources */,
+				404A82401D566FD9001EF486 /* Rooster.mp3 in Resources */,
 				404A823D1D566FD9001EF486 /* explode.wav in Resources */,
 				404A822C1D564B20001EF486 /* LaunchScreen.storyboard in Resources */,
+				404A82461D5680AF001EF486 /* horsepls.mp3 in Resources */,
 				404A82291D564B20001EF486 /* Assets.xcassets in Resources */,
-				404A823F1D566FD9001EF486 /* Horse Neigh-SoundBible.com-1740540960.mp3 in Resources */,
 				404A82271D564B20001EF486 /* Main.storyboard in Resources */,
-				404A823E1D566FD9001EF486 /* Cow And Bell-SoundBible.com-1243222141.mp3 in Resources */,
+				404A823E1D566FD9001EF486 /* cow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +181,7 @@
 				404A82361D565A10001EF486 /* PhotosViewController.swift in Sources */,
 				404A82221D564B20001EF486 /* AppDelegate.swift in Sources */,
 				404A82341D565A02001EF486 /* SoundsViewController.swift in Sources */,
+				404A82421D56734F001EF486 /* SoundAssist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

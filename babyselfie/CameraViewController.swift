@@ -16,14 +16,13 @@ class CameraViewController: UIViewController {
     let stillImageOutput = AVCaptureStillImageOutput()
     var error: NSError?
     
-    var ButtonAudioURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("explode", ofType: "wav")!)
     var ButtonAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initializeImageCapture()
-        
-        ButtonAudioPlayer = try! AVAudioPlayer(contentsOfURL: ButtonAudioURL, fileTypeHint: nil)
+    
+        ButtonAudioPlayer = AVAudioPlayer()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -75,7 +74,7 @@ extension CameraViewController {
     }
     
     @IBAction func soundButton(sender: AnyObject) {
-        ButtonAudioPlayer.pause()
+        ButtonAudioPlayer = try! AVAudioPlayer(contentsOfURL: SoundAssist.randomSoundEffect()) 
         ButtonAudioPlayer.currentTime = 1
         ButtonAudioPlayer.prepareToPlay()
         
