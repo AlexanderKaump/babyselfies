@@ -76,6 +76,7 @@
 				404A82231D564B20001EF486 /* CameraViewController.swift */,
 				404A82411D56734F001EF486 /* SoundAssist.swift */,
 				404A82331D565A02001EF486 /* SoundsViewController.swift */,
+				AC6CA9721D567CA000212352 /* PhotoViewController.swift */,
 				404A82351D565A10001EF486 /* PhotosViewController.swift */,
 				404A82251D564B20001EF486 /* Main.storyboard */,
 				404A82281D564B20001EF486 /* Assets.xcassets */,

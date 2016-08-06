@@ -79,6 +79,5 @@ extension CameraViewController {
         ButtonAudioPlayer.prepareToPlay()
         
         ButtonAudioPlayer.play()
-        
     }
 }

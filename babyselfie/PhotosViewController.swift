@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let photoNames = ["selfie1", "selfie2", "selfie3", "selfie4", "selfie5"]
@@ -21,6 +21,14 @@ class PhotosViewController: UIViewController, UICollectionViewDataSource, UIColl
         (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: width, height: width)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PhotoSegue" {
+            let indexPath = sender as! NSIndexPath
+            let name = self.photoNames[indexPath.row]
+            let photoVC = segue.destinationViewController as! PhotoViewController
+            photoVC.photoName = name
+        }
+    }
 }
 
 extension PhotosViewController {
@@ -38,6 +46,10 @@ extension PhotosViewController {
         let name = self.photoNames[indexPath.row]
         cell.imageView.image = UIImage(named: name)
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("PhotoSegue", sender: indexPath)
     }
 }
 
