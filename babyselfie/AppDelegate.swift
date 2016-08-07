@@ -13,10 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        print("adam was here")
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey("selectedSounds") == nil {
+            let allSounds = SoundAssist.dictReturn()
+            for sound in allSounds {
+                SoundAssist.addSelect(sound["name"]!)
+            }
+        }
+        
+        
         return true
     }
 
