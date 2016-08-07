@@ -61,8 +61,12 @@ class CustomPhotoAlbum {
         })
     }
     
-    func photos() -> PHFetchResult {
-        let assets : PHFetchResult = PHAsset.fetchAssetsInAssetCollection(assetCollection, options: nil)
-        return assets
+    func photos() -> PHFetchResult? {
+        if assetCollection != nil {
+            let assets : PHFetchResult = PHAsset.fetchAssetsInAssetCollection(assetCollection, options: nil)
+            return assets
+        } else {
+            return nil
+        }
     }
 }

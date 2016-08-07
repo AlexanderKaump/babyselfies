@@ -44,6 +44,11 @@ class SoundAssist {
         dictArray.append(["name":"Jump7", "ext": "wav"])
         dictArray.append(["name":"explode", "ext": "wav"])
         dictArray.append(["name":"Jump9", "ext": "wav"])
+        dictArray.append(["name":"pig", "ext": "mp3"])
+        dictArray.append(["name":"bleat", "ext": "mp3"])
+        dictArray.append(["name":"neigh", "ext": "mp3"])
+        dictArray.append(["name":"boop", "ext": "mp3"])
+        dictArray.append(["name":"spring", "ext": "mp3"])
 
         return dictArray
     }
